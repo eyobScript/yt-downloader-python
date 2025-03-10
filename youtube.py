@@ -14,12 +14,13 @@ def download_video_or_audio(url, save_path="."):
         formats = info.get("formats", [])
         video_formats = []
         audio_formats = []
-        print(formats)
+
         # Separate video and audio formats
         for fmt in formats:
-            if "video" in fmt["format_note"]:
+            format_note = fmt.get("format_note", "")
+            if "video" in format_note:
                 video_formats.append(fmt)
-            elif "audio" in fmt["format_note"]:
+            elif "audio" in format_note:
                 audio_formats.append(fmt)
 
         # Print available video formats
