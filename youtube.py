@@ -22,6 +22,7 @@ def download_video(url, save_path="."):
         print(formats)
         print("\nAvailable Formats:")
         for fmt in formats:
+
             fmt_id = fmt.get("format_id")
             fmt_note = fmt.get("format_note")
             resolution = fmt.get("resolution", "Audio")  # If no resolution, it's audio
