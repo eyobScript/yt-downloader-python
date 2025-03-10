@@ -44,5 +44,6 @@ if __name__ == "__main__":
 
     if save_dir:
         print("Started Download....")
+
         download_video(video_url, save_path="./downloads")
 
