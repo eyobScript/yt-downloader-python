@@ -42,7 +42,6 @@ if __name__ == "__main__":
     save_dir = open_file_dialog()
 
 
-
     if save_dir:
         print("Started Download....")
 
