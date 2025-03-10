@@ -25,6 +25,18 @@ def open_file_dialog():
     if folder_path:
         print(f"Selected folder: {folder_path}")
     return folder_path
-# video_url = "https://youtu.be/g_Pog2fAuAE?si=b09NM7gHzTwQcgVz"
-# download_video(video_url, save_path="./downloads")
+
+
+if __name__ == "__main__":
+    root = tk.Tk()
+    root.withdraw()
+
+    video_url = input("Please inter you tube video URL: ")
+    save_dir = open_file_dialog()
+
+    if save_dir:
+        print("Started Download....")
+        download_video(video_url, save_path=save_dir)
+    else:
+        print("Invalid save location.")
 
