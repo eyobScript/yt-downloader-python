@@ -13,6 +13,7 @@ def download_video(url, save_path="."):
         "quiet": False,  # Show progress
     }
 
+
     # Show available formats
     with yt_dlp.YoutubeDL() as ydl:
         info = ydl.extract_info(url, download=False)  # Get available formats without downloading
