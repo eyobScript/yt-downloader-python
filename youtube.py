@@ -21,6 +21,7 @@ def download_video(url, save_path="."):
         formats = info.get("formats", [])
         print(formats)
         print("\nAvailable Formats:")
+
         for fmt in formats:
 
             fmt_id = fmt.get("format_id")
