@@ -20,6 +20,6 @@ def download_video(url, save_path="."):
         print(f"Error: {e}")
 
 
-video_url = "https://youtu.be/g_Pog2fAuAE?si=b09NM7gHzTwQcgVz"
-download_video(video_url, save_path="./downloads")
+# video_url = "https://youtu.be/g_Pog2fAuAE?si=b09NM7gHzTwQcgVz"
+# download_video(video_url, save_path="./downloads")
 
