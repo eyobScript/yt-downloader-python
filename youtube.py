@@ -12,6 +12,7 @@ def download_video(url, save_path="."):
             print("No progressive MP4 streams available.")
             return
 
+
         highest_res_stream = stream.get_highest_resolution()
         highest_res_stream.download(output_path=save_path)
 
