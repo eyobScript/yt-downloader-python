@@ -28,6 +28,7 @@ def open_file_dialog():
     if folder_path:
 
         print(f"Selected folder: {folder_path}")
+
     return folder_path
 
 
