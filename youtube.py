@@ -46,6 +46,7 @@ def download_video(url, save_path="."):
 
 def open_file_dialog():
     folder_path = filedialog.askdirectory()
+
     if folder_path:
         print(f"Selected folder: {folder_path}")
     return folder_path
