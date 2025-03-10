@@ -27,6 +27,7 @@ def download_video(url, save_path="."):
             if fmt_note is not None:
                 print(f"[{fmt_id}] {resolution} - {fmt_note} ({ext})")
 
+
     # Ask the user to choose a format
     format_choice = input("\nEnter format ID (or press Enter for best quality): ").strip()
 
