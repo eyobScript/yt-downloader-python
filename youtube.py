@@ -15,16 +15,17 @@ def download_video_or_audio(url, save_path="."):
         video_formats = []
         audio_formats = []
 
-        # Separate video and audio formats
+        # Separate video and audio formats based on type (ext for video, audio_ext for audio)
         for fmt in formats:
-            format_note = fmt.get("format_note", "")
-            if "video" in format_note:
+            if 'video' in fmt.get('ext', ''):  # Check if the format has video extension (e.g., mp4, webm)
                 video_formats.append(fmt)
-            elif "audio" in format_note:
+            elif 'audio' in fmt.get('ext', ''):  # Check if the format has audio extension (e.g., mp3, m4a)
                 audio_formats.append(fmt)
 
         # Print available video formats
         print("\nAvailable Video Formats:")
+        if not video_formats:
+            print("No video formats available.")
         for fmt in video_formats:
             fmt_id = fmt.get("format_id")
             resolution = fmt.get("resolution", "No Resolution")
@@ -33,6 +34,8 @@ def download_video_or_audio(url, save_path="."):
 
         # Print available audio formats
         print("\nAvailable Audio Formats:")
+        if not audio_formats:
+            print("No audio formats available.")
         for fmt in audio_formats:
             fmt_id = fmt.get("format_id")
             audio_quality = fmt.get("audio_quality", "Unknown")
