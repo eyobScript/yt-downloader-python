@@ -31,7 +31,6 @@ def download_video(url, save_path="."):
     # Ask the user to choose a format
     format_choice = input("\nEnter format ID (or press Enter for best quality): ").strip()
 
-
     if format_choice:
         options["format"] = format_choice  # Download the chosen format
     else:
