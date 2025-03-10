@@ -20,6 +20,11 @@ def download_video(url, save_path="."):
         print(f"Error: {e}")
 
 
+def open_file_dialog():
+    folder_path = filedialog.askdirectory()
+    if folder_path:
+        print(f"Selected folder: {folder_path}")
+    return folder_path
 # video_url = "https://youtu.be/g_Pog2fAuAE?si=b09NM7gHzTwQcgVz"
 # download_video(video_url, save_path="./downloads")
 
